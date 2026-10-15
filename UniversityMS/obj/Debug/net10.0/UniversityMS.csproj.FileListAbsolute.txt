@@ -112,3 +112,4 @@
 /home/hp/UMS/UniversityMS/obj/Debug/net10.0/UniversityMS.pdb
 /home/hp/UMS/UniversityMS/obj/Debug/net10.0/UniversityMS.genruntimeconfig.cache
 /home/hp/UMS/UniversityMS/obj/Debug/net10.0/ref/UniversityMS.dll
+/home/hp/UMS/UniversityMS/obj/Debug/net10.0/UniversityMS.sourcelink.json

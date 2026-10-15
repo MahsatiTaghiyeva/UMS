@@ -86,7 +86,6 @@ while (true)
     }
 }
 
-// ==================== 1. ADD DEPARTMENT ====================
 
 void AddDepartment()
 {
@@ -114,7 +113,6 @@ void AddDepartment()
     Console.WriteLine($"State after SaveChanges: {context.Entry(department).State}");
 }
 
-// ==================== 2. ADD TEACHER ====================
 
 void AddTeacher()
 {
@@ -146,10 +144,9 @@ void AddTeacher()
     context.Teachers.Add(teacher);
     context.SaveChanges();
 
-    Console.WriteLine($"Teacher added. ID: {teacher.Id}");
+    Console.WriteLine($"Teacher added.");
 }
 
-// ==================== 3. ADD COURSE ====================
 
 void AddCourse()
 {
@@ -248,7 +245,6 @@ void AddStudent()
     Console.WriteLine($"State after SaveChanges: {context.Entry(student).State}");
 }
 
-// ==================== 5. ENROLL STUDENT ====================
 
 void EnrollStudentInCourse()
 {
@@ -285,7 +281,7 @@ void EnrollStudentInCourse()
     {
         StudentId = studentId,
         CourseId = courseId,
-        EnrollmentDate = DateTime.Today,
+        EnrollmentDate = DateTime.UtcNow,
         Grade = 0
     };
 
@@ -295,7 +291,6 @@ void EnrollStudentInCourse()
     Console.WriteLine("Student enrolled successfully.");
 }
 
-// ==================== 6. SHOW DEPARTMENTS ====================
 
 void ShowDepartmentsWithRelatedData()
 {
@@ -328,7 +323,6 @@ void ShowDepartmentsWithRelatedData()
     }
 }
 
-// ==================== 7. SHOW STUDENTS AND COURSES ====================
 
 void ShowStudentsAndTheirCourses()
 {
@@ -359,7 +353,6 @@ void ShowStudentsAndTheirCourses()
     }
 }
 
-// ==================== 8. SHOW STUDENTS BY COURSE ====================
 
 void ShowStudentsByCourse()
 {
@@ -389,7 +382,6 @@ void ShowStudentsByCourse()
     }
 }
 
-// ==================== 9. UPDATE STUDENT ====================
 
 void UpdateStudent()
 {
@@ -427,7 +419,6 @@ void UpdateStudent()
     Console.WriteLine($"State after SaveChanges: {context.Entry(student).State}");
 }
 
-// ==================== 10. DELETE STUDENT ====================
 
 void DeleteStudent()
 {
@@ -464,7 +455,6 @@ void DeleteStudent()
     Console.WriteLine($"State after SaveChanges: {context.Entry(student).State}");
 }
 
-// ==================== 11. DELETEBEHAVIOR TESTS ====================
 
 void TestDeleteBehavior()
 {
@@ -553,7 +543,6 @@ void TestStudentCascade()
     Console.WriteLine("Student deleted. Cascade should remove its enrollments.");
 }
 
-// ==================== 12. CHANGETRACKER ====================
 
 void ShowChangeTracker()
 {
@@ -592,8 +581,7 @@ void ShowChangeTracker()
     Console.WriteLine("No SaveChanges was called; test changes are discarded.");
 }
 
-// ==================== HELPER METHODS ====================
-
+//helpers
 void ShowDepartments(UniversityDbContext context)
 {
     Console.WriteLine("\n--- DEPARTMENTS ---");
