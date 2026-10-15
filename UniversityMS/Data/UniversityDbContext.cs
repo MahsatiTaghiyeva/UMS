@@ -28,11 +28,9 @@ public class UniversityDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        // Apply existing Fluent API configurations.
         modelBuilder.ApplyConfigurationsFromAssembly(
             typeof(UniversityDbContext).Assembly);
 
-        // BirthDate should be stored as a PostgreSQL DATE.
         modelBuilder.Entity<Student>()
             .Property(s => s.BirthDate)
             .HasColumnType("date");

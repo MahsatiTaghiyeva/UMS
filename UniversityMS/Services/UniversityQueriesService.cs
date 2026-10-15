@@ -12,7 +12,6 @@ public class UniversityQueryService
         _context = context;
     }
 
-    // 1. Show each Department with its Teachers
     public async Task ShowDepartmentsWithTeachersAsync()
     {
         var departments = await _context.Departments
@@ -32,7 +31,6 @@ public class UniversityQueryService
         }
     }
 
-    // 2. Show each Department with Courses and their Teachers
     public async Task ShowDepartmentsWithCoursesAndTeachersAsync()
     {
         var departments = await _context.Departments
@@ -54,7 +52,6 @@ public class UniversityQueryService
         }
     }
 
-    // 3. Show each Student with Enrollments and Courses
     public async Task ShowStudentsWithEnrollmentsAsync()
     {
         var students = await _context.Students
@@ -80,7 +77,6 @@ public class UniversityQueryService
         }
     }
 
-    // 4. Show each Course with its enrolled Students
     public async Task ShowCoursesWithStudentsAsync()
     {
         var courses = await _context.Courses
@@ -101,7 +97,6 @@ public class UniversityQueryService
         }
     }
 
-    // 5. Show each Student's Course, EnrollmentDate, and Grade
     public async Task ShowStudentCourseDetailsAsync()
     {
         var students = await _context.Students
